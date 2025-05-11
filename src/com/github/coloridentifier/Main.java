@@ -5,8 +5,10 @@ import com.github.coloridentifier.graphing.Graph;
 import java.awt.*;
 
 public class Main {
+    public static Graph scatterPlot;
+
     public static void main(String args[]) {
-        Graph scatterPlot = new Graph( 600, 600, 0, 0, 14, 14, "Fruits", "Spike Length", "Spot Size");
+        scatterPlot = new Graph( 600, 600, 0, 0, 14, 14, "Fruits", "Spike Length", "Spot Size");
         scatterPlot.setRegularity(2);
         // plot "good" fruits
         scatterPlot.addPoint(4.2, 6.1, Color.BLUE);
@@ -38,7 +40,7 @@ public class Main {
         scatterPlot.addPoint(11.3, 12.8, 'X', Color.RED);
         scatterPlot.addPoint(14, 10.9, 'X', Color.RED);
 
-        new ColorIdentifier(scatterPlot);
+        new ColorIdentifier(2, 2, 2);
 
         scatterPlot.repaint();
     }
